@@ -8,6 +8,10 @@ p, li{
     color: rgb(82, 72, 72);
 }
 
+li{
+    line-height: 30px;
+}
+
 h1, h2 {
 
     color: rgb(100, 29, 167);
@@ -17,4 +21,19 @@ h1, h2 {
     color: rgb(13, 13, 141);
 }
 
+.herotitle {
+    color: rgb(255, 127, 187);
+    line-height: 55px;
+    font-weight: 600;
+    font-size: 30px;
+}
 
+.picture-round {
+    border-radius: 50%;
+    width: 150px;
+}
+.picure-principal{
+
+    border-radius: 10%;
+    width: 500px;
+}
