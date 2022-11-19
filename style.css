@@ -71,3 +71,7 @@ h1, h2 {
     height: 100px;
     overflow: auto;
 }
+
+li:hover{
+    background-color: #fff;
+}
