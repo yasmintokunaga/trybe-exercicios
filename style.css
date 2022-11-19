@@ -67,4 +67,7 @@ h1, h2 {
 
 .paragrafos-amizade{
     background-color: rgb(160, 113, 144);
+    width: 70%;
+    height: 100px;
+    overflow: auto;
 }
