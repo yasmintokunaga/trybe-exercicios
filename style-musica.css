@@ -1,0 +1,48 @@
+body{
+    color: green;
+    font-family: sans-serif;
+}
+
+#selva{
+    width: 400px;
+    position:absolute;
+    top: 20px;
+    left: 10px;
+    z-index: 1;
+}
+
+#leao{
+    width: 200px;
+    position: absolute;
+    top: 90px;
+    left: 90px;
+    z-index: 2;
+}
+
+#sol{
+    width: 100px;
+    position: absolute;
+    top: 30px;
+    left: 300px;
+    z-index: 3;
+}
+
+h1{
+    position: fixed;
+    z-index: 4;
+    left: 30px;
+    color: black;
+}
+
+.letter{
+    width: 200px;
+    position: absolute;
+    z-index: 5;
+    top: 250px;
+}
+
+.house{
+    width: 80px;
+    float: left;
+    margin-right: 10px;
+}
