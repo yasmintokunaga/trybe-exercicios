@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: 'Montserrat', sans-serif;
   }
@@ -16,6 +20,7 @@ body {
     line-height: 55px;
     font-weight: 600;
     font-size: 45px;
+    margin-bottom: 30px;
   }
   
   .section-title {
@@ -50,4 +55,15 @@ body {
     height: 600px;
     background-position: 50% 25%;
     padding: 60px 30px 70px 30px;
+  }
+
+  .header-content{
+    max-width: 60%;
+    margin-left: 15px;
+
+  }
+
+  .header-text{
+    max-width: 80%;
+
   }
