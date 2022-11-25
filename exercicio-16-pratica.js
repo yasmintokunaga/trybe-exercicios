@@ -7,4 +7,3 @@ for (let index = 0 ; index < 25; index += 1) {
 array1a25.push(index+1);
 console.log(array1a25[index]/2);
 }
-
