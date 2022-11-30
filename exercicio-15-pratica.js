@@ -1,16 +1,16 @@
-// Crie uma função que receba um array de inteiros e retorne o índice do maior valor
+// Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
 
-function maiorValor(array) {
-  let maior = 0;
+function menorValor(array) {
+  let menor = 0;
 
   for ( let index = 1; index < array.length; index += 1) {
-    if (array[index] > maior) {
-      maior = index;
+    if (array[index] < menor) {
+      menor = index;
     }
   }
-  return maior;
+  return menor;
 }
 
-let arrayTeste = [2, 3, 6, 7, 10, 1];
+let arrayTeste = [2, 4, 6, 7, 10, 0, -3];
 
-console.log(maiorValor(arrayTeste));
+console.log(menorValor(arrayTeste));
