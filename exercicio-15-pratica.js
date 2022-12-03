@@ -1,6 +1,6 @@
 // Função 1: Escreva uma função que substitua a letra ‘x’ em uma frase.
 
-function substituaX (nome) {
+const substituaX = (nome) => {
     const frase ='Tryber x aqui!';
     
     let arrayFrase = frase.split(' ');
@@ -20,7 +20,7 @@ let nome ='Yasmin';
 
 // Função 2: Escreva uma função que irá receber o retorno da Função 1 por parâmetro e retornará uma nova string.
 
-function minhasSkills(substituaX) {
+const minhasSkills= (substituaX) => {
     const skills = ['HTML', 'CSS', 'JavaScript'];
     let concatFunctions = `${substituaX}
     Minhas três pricncipais habilidades são: `;
