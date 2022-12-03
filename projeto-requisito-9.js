@@ -2,7 +2,7 @@
 
 function encode(frase) {
 let newFrase =frase.split('');
-    decode = {
+let decode = {
         a: 1,
         e: 2,
         i: 3,
@@ -18,6 +18,6 @@ let newFrase =frase.split('');
     return newFrase.join('');
 }
 
-let fraseTeste = 'hello';
+let fraseTeste = 'how are you today?';
 
 console.log(encode(fraseTeste));
