@@ -4,12 +4,6 @@
 //  - retornar true se ambos os valores forem verdadeiros
 //  - retornar false se um ou ambos os parâmetros forem falsos
 
-function compareTrue (boolean1, boolean2) {
-    if(boolean1 && boolean2) {
-        return true;
-    } else {
-        return false;
-    }
-}
+const compareTrue = (boolean1, boolean2) => boolean1 && boolean2 ? true : false;
 
-console.log(compareTrue(true, false));
+console.log(compareTrue(true, true));
