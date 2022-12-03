@@ -2,23 +2,19 @@
 
 function highestCount(arrayNumbers) {
     let identifyHighestNumber = arrayNumbers[0];
+    let count = 1;
 
     for(let index = 1; index < arrayNumbers.length; index += 1) {
         if(arrayNumbers[index] > identifyHighestNumber){
             identifyHighestNumber = arrayNumbers[index];
-        }
-    }
-
-    let count = 0;
-
-    for(let index = 0; index < arrayNumbers.length; index += 1) {
-        if(arrayNumbers[index] === identifyHighestNumber){
+            count = 1;
+        } else if (arrayNumbers[index] === identifyHighestNumber){
             count += 1;
         }
     }
     return count;
 }
 
-let arrayTest = [0, 4, 4, 4, 9, 2, 1];
+let arrayTest = [9, 1, 2, 3, 9, 5, 7];
 
 console.log(highestCount(arrayTest));
