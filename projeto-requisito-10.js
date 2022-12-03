@@ -4,9 +4,9 @@ function techlist (arrayTech, namePerson) {
 let arrayObjetc = [];
 arrayTech.sort();
 if(arrayTech.length >= 1) {
-  for (let index = 0; index < arrayTech.length; index += 1) {
+  for (value of arrayTech) {
     arrayObjetc.push({ 
-      tech: arrayTech[index], 
+      tech: value, 
       name: namePerson});
   }
 } else {
