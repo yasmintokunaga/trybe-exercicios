@@ -10,14 +10,11 @@ let decode = {
         u: 5
     }
 
-    for (let index = 0; index < newFrase.length; index += 1) {
-      if (newFrase[index] === 'a' || newFrase[index] === 'e' || newFrase[index] === 'i' || newFrase[index] === 'o' || newFrase[index] === 'u'){
-        newFrase[index] = decode[newFrase[index]];
-      }
+    for (let index = 0; index < newFrase.length; index += 1) {     
+      for(key in decode) {newFrase[index] = key === newFrase[index] ? decode[key] : newFrase[index];}
     }
     return newFrase.join('');
 }
 
 let fraseTeste = 'how are you today?';
-
 console.log(encode(fraseTeste));
