@@ -127,7 +127,7 @@ function addTasks(task) {
 }
 addTasks('cozinhar');
 
-// >> PARTE 9 << ADICIONAR UMA LEGENDA COM COR PARA A TAREFA
+// >> PARTE 8 << ADICIONAR UMA LEGENDA COM COR PARA A TAREFA
 function addSubtitleColorTask(cor) {
   let subtitle = document.createElement('div');
   subtitle.className = 'task';
@@ -136,4 +136,22 @@ function addSubtitleColorTask(cor) {
   myTasks.appendChild(subtitle);
 }
 
-addSubtitleColorTask('red');
+addSubtitleColorTask('pink');
+
+// >> PARTE 9 << SELECIONAR UMA TAREFA
+function selectTask() {
+  const buttonTask = document.querySelector('.task');
+    buttonTask.addEventListener('click', () => {
+      const selected = document.querySelector('.selected');
+      if(selected) {
+        buttonTask.classList.remove('selected');
+        console.log("oi");
+      } else {
+      buttonTask.classList.add('selected');
+      }
+    });
+  }
+
+selectTask();
+
+// >> PARTE 10 << ATRIBUA A COR DA TAREFA AO DIA DO CALENDARIO
