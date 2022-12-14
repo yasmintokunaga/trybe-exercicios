@@ -86,5 +86,18 @@ function buttonFriday(buttonDayOfWeek) {
   buttonFriday.id = 'btn-friday';
   buttonFriday.innerHTML = buttonDayOfWeek;
   buttonsContainer.appendChild(buttonFriday);
+
+  buttonFriday.addEventListener('click', () => {
+    const fridayDecember = [4, 11, 18, 25];
+    const dayFriday = document.getElementsByClassName('friday');
+
+    for(let index = 0; index < dayFriday.length; index += 1) {
+      if(dayFriday[index].innerHTML == 'Sextou') {
+        dayFriday[index].innerHTML = fridayDecember[index];
+      } else {
+     dayFriday[index].innerHTML = 'Sextou';
+      }
+    }
+  });
 }
 buttonFriday('Sexta-Feira');
