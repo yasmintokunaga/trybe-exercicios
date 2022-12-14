@@ -141,17 +141,30 @@ addSubtitleColorTask('pink');
 // >> PARTE 9 << SELECIONAR UMA TAREFA
 function selectTask() {
   const buttonTask = document.querySelector('.task');
-    buttonTask.addEventListener('click', () => {
-      const selected = document.querySelector('.selected');
-      if(selected) {
-        buttonTask.classList.remove('selected');
-        console.log("oi");
-      } else {
+  buttonTask.addEventListener('click', () => {
+    const selected = document.querySelector('.selected');
+    if(selected) {
+      buttonTask.classList.remove('selected');
+    } else {
       buttonTask.classList.add('selected');
-      }
-    });
-  }
-
+      colorDayTask();
+    }
+  });
+}
 selectTask();
 
 // >> PARTE 10 << ATRIBUA A COR DA TAREFA AO DIA DO CALENDARIO
+function colorDayTask() {
+  colorDayNumber = document.querySelector('.selected').style.backgroundColor;
+  const day = document.querySelectorAll('.day');
+  for(let index = 0; index < day.length; index +=1) {
+    day[index].addEventListener('click', (event) => {
+      if(event.target.style.color == colorDayNumber){
+        event.target.style.color = 'rgb(119, 119, 119)';
+      } else {
+        event.target.style.color = colorDayNumber;
+      }
+    });
+  }         
+}
+
