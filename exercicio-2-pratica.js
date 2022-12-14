@@ -126,3 +126,14 @@ function addTasks(task) {
   myTasks.appendChild(newTask);
 }
 addTasks('cozinhar');
+
+// >> PARTE 9 << ADICIONAR UMA LEGENDA COM COR PARA A TAREFA
+function addSubtitleColorTask(cor) {
+  let subtitle = document.createElement('div');
+  subtitle.className = 'task';
+  subtitle.style.backgroundColor = cor;
+  const myTasks = document.querySelector('.my-tasks');
+  myTasks.appendChild(subtitle);
+}
+
+addSubtitleColorTask('red');
