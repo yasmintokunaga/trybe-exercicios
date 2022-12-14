@@ -33,6 +33,7 @@ const createDaysOfMonth = () => {
     for(value2 of holidayDecember) {
       if(value === value2) {
         dayOfDecember.classList.add('holiday');
+        dayOfDecember.style.backgroundColor = 'rgb(238, 238, 238)';
       }
     }
 
@@ -52,7 +53,38 @@ function buttonHolidays(buttonName) {
   btnHoliday.id = 'btn-holiday';
   btnHoliday.innerHTML = buttonName;
   buttonsContainer.appendChild(btnHoliday);
+
+  btnHoliday.addEventListener('click', () => {
+    const holiday = document.getElementsByClassName('holiday');
+    for(value of holiday) {
+      let backgroundColorHoliday = value.style.backgroundColor;
+      colorOriginal = 'rgb(238, 238, 238)';
+      colorHoliday = 'green';
+
+      if(backgroundColorHoliday === colorOriginal) {
+        changeBackgroundColorHoliday(colorHoliday);
+      } else {
+        changeBackgroundColorHoliday(colorOriginal);
+      }
+    }
+  });
 }
 buttonHolidays('Feriados');
 
 // >> PARTE 3 << MUDAR COR DOS DIAS DE FERIADO
+function changeBackgroundColorHoliday(color) {
+  const holiday = document.getElementsByClassName('holiday');
+  for(value of holiday) {
+    value.style.backgroundColor = color;
+  }
+}
+
+// >> PARTE 4 << BOTÃO SEXTA FEIRA
+function buttonFriday(buttonDayOfWeek) {
+  let buttonsContainer = document.querySelector('.buttons-container');
+  let buttonFriday = document.createElement('button');
+  buttonFriday.id = 'btn-friday';
+  buttonFriday.innerHTML = buttonDayOfWeek;
+  buttonsContainer.appendChild(buttonFriday);
+}
+buttonFriday('Sexta-Feira');
