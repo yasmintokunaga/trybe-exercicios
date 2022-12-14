@@ -101,3 +101,28 @@ function buttonFriday(buttonDayOfWeek) {
   });
 }
 buttonFriday('Sexta-Feira');
+
+// >> PARTE 6 << ZOOM NOS DIAS DO MÊS QUANDO PASSAR O MOUSE POR CIMA
+function zoomDay() {
+  const day = document.querySelectorAll('.day');
+  for(let index  = 0; index < day.length; index += 1) {
+    day[index].addEventListener('mouseenter', () => {
+      day[index].style.fontSize = '25px';
+      }
+    );
+    day[index].addEventListener('mouseleave', () => {
+      day[index].style.fontSize = '20px';
+    });
+  }
+}
+zoomDay();
+
+// >> PARTE 7 << TAREFA PERSONALIZADA
+function addTasks(task) {
+  let newTask = document.createElement('span');
+  newTask.innerHTML = task;
+  
+  const myTasks = document.querySelector('.my-tasks');
+  myTasks.appendChild(newTask);
+}
+addTasks('cozinhar');
