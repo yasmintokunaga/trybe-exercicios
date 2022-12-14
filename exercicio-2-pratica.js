@@ -168,3 +168,37 @@ function colorDayTask() {
   }         
 }
 
+// >> BONUS << ADICIONAR COMPROMISSO DE ACORDO COM A CAIXA DE TEXTO
+function addAppointment() {
+  const inputContainer = document.querySelector('.input-container');
+  const label = document.querySelector('label');
+  const listAppointments = document.createElement('ul');
+  listAppointments.id = 'list-appointment';
+  inputContainer.insertBefore(listAppointments, label);
+
+  const buttonAdd = document.querySelector('#btn-add');
+  const inputAppointment = document.querySelector('#task-input');
+  
+  buttonAdd.addEventListener('click', () => {  
+    let appointmentText = inputAppointment.value;
+    if(appointmentText == '') {
+      alert('Por favor, inserir um compromisso');
+    } else {
+      let newItem = document.createElement('li');
+      newItem.innerHTML = appointmentText;
+      listAppointments.appendChild(newItem);
+    }
+  });
+  inputAppointment.addEventListener('keyup', (event) => {
+    let appointmentText = inputAppointment.value;
+    if(event.key === 'Enter' && appointmentText.length > 0) {
+      let newItem = document.createElement('li');
+      newItem.innerHTML = appointmentText;
+      listAppointments.appendChild(newItem);
+    } else if(event.key === 'Enter' && appointmentText.length === 0){
+      alert('Por favor, inserir um compromisso');
+    }
+  });
+}
+addAppointment();
+
