@@ -77,3 +77,18 @@ button {
 .small {
   font-size: 20px;
 }
+
+.scorePlayer {
+  display: inline-block;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 20px;
+  margin: 20px;
+  text-align: center;
+  color: white;
+  text-shadow: black 2px 2px 5px;
+}
+
+.scorePlayer p {
+  font-size: 35px;
+  margin-top: 10px;
+}
