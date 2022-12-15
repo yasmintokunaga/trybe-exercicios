@@ -32,6 +32,8 @@ window.onload = () => {
   }
   buttonReset.addEventListener('click', () => {
     resetRun();
+    localStorage.clear();
+    document.location.reload();
   });
 
   //ANDANDO COM OS CARRINHOS
