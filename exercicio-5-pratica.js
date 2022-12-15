@@ -28,15 +28,35 @@ for (key in itensMenu) {
     sectionMenu.appendChild(btnMenu);
 }
 }
+//CRIANDO LOCAL STORAGE
+const storage = localStorage;
+
+//RECUPERANDO FORMATAÇÃO LOCAL STORAGE
+const telaInteira = document.querySelector('body');
+if (storage.getItem('CorDeFundo') != null) {
+    telaInteira.style.backgroundColor = storage.getItem('CorDeFundo');
+}
+if (storage.getItem('CorDaFonte') != null) {
+    telaInteira.style.color = storage.getItem('CorDaFonte');
+}
+if (storage.getItem('TamanhoDaFonte') != null) {
+    telaInteira.style.fontSize = storage.getItem('TamanhoDaFonte');
+}
+if (storage.getItem('Espacamento') != null) {
+    telaInteira.style.lineHeight = storage.getItem('Espacamento');
+}
+if (storage.getItem('TipoDaFonte') != null) {
+    telaInteira.style.fontFamily = storage.getItem('TipoDaFonte');
+}
 
 //ATIVANDO COR DE FUNDO
 const btnCorDeFundo = document.querySelectorAll('.Cordefundo');
 function changeCorDeFundo () {
   for(let index = 0; index < btnCorDeFundo.length; index += 1) {
     btnCorDeFundo[index].addEventListener('click', () => {
-        const telaInteira = document.querySelector('body');
         let cor = btnCorDeFundo[index].innerHTML;
         telaInteira.style.backgroundColor = cor;
+        storage.setItem('CorDeFundo', cor);
     })
   }
 }
@@ -47,9 +67,9 @@ const btnCorDaFonte = document.querySelectorAll('.Cordafonte');
 function changeCorDaFonte () {
   for(let index = 0; index < btnCorDaFonte.length; index += 1) {
     btnCorDaFonte[index].addEventListener('click', () => {
-        const telaInteira = document.querySelector('body');
         let cor = btnCorDaFonte[index].innerHTML;
         telaInteira.style.color = cor;
+        storage.setItem('CorDaFonte', cor);
     })
   }
 }
@@ -60,9 +80,9 @@ const btnTamanhoDaFonte = document.querySelectorAll('.Tamanhodafonte');
 function changeTamanhoDaFonte () {
   for(let index = 0; index < btnTamanhoDaFonte.length; index += 1) {
     btnTamanhoDaFonte[index].addEventListener('click', () => {
-        const telaInteira = document.querySelector('body');
         let tamanho = btnTamanhoDaFonte[index].innerHTML;
         telaInteira.style.fontSize = tamanho;
+        storage.setItem('TamanhoDaFonte', tamanho);
     })
   }
 }
@@ -73,9 +93,9 @@ const btnEspaçamentoEntreAsLinhas = document.querySelectorAll('.Espaçamentoent
 function changeEspaçamentoEntreAsLinhas () {
   for(let index = 0; index < btnEspaçamentoEntreAsLinhas.length; index += 1) {
     btnEspaçamentoEntreAsLinhas[index].addEventListener('click', () => {
-        const telaInteira = document.querySelector('body');
         let espacamento = btnEspaçamentoEntreAsLinhas[index].innerHTML;
         telaInteira.style.lineHeight = espacamento;
+        storage.setItem('Espacamento', espacamento);
     })
   }
 }
@@ -86,9 +106,9 @@ const btnTipoDaFonte = document.querySelectorAll('.Tipodafonte');
 function changeTipoDaFonte () {
   for(let index = 0; index < btnTipoDaFonte.length; index += 1) {
     btnTipoDaFonte[index].addEventListener('click', () => {
-        const telaInteira = document.querySelector('body');
         let tipo = btnTipoDaFonte[index].innerHTML;
         telaInteira.style.fontFamily = tipo;
+        storage.setItem('TipoDaFonte', tipo);
     })
   }
 }
