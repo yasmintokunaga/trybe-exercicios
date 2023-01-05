@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin: 15px;
+}
+
+.hits-mistakes {
+  width: 100px;
+  margin: auto;
+  text-align: center;
+}
+
+.hit {
+  background-color: rgb(90, 201, 90);
+  padding: 10px;
+}
+
+.mistakes {
+  background-color: red;
+  padding: 10px;
+}
+
+#clear-btn {
+  background-color: aqua;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+#full-court {
+  padding: 0 180px;
+  margin-top: 30px;
+}
+
+.team-field {
+  border: 5px solid purple;
+  background-color: rgb(230, 165, 103);
+  height: 300px;
+  width: 49.5%;
+  margin: 0;
+  float: left;
+}
+
+.position {
+  transform: rotate(180deg);
+}
+
+.trhee-points-arc {
+  border-top: 5px solid white;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: purple;
+  position: relative;
+  top: 43px;
+  height: 200px;
+  width: 60%;
+}
+
+.rectangle {
+  border-top: 5px solid white;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+  width: 90%;
+  height: 40px;
+  position: relative;
+  top: 75px;
+}
+
+.circle {
+  border: 5px solid white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  float: right;
+  top: -5px;
+  left: 20px;
+  
+}
