@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  margin: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(95, 94, 94);
+  font-size: 30px;
+}
+
+#formulario {
+  border: 4px solid black;
+  margin: 20px;
+}
+
+.conteudo {
+  margin: 20px;
+  color: rgb(95, 94, 94);
+  font-size: 25px;
+}
+
+.input-box {
+  height: 25px;
+  border: 2px solid gray;
+}
+
+.conteudo .destination {
+  font-size: 22px;
+  margin-right: 8px;
+}
+
+#resposta {
+  margin-top: 10px;
+  width: 60%;
+  height: 160px;
+  resize: none;
+}
+
+.agrre-term {
+  font-size: 22px;
+}
+
+.btn-submit-reset {
+margin: 20px;
+}
+.btn {
+  margin-right: 10px;
+  width: 190px;
+  font-size: 22px;
+  color: rgb(95, 94, 94);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 7px 0;
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 7px;
+}
+
+span {
+  color: purple;
+}

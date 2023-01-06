@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrybeTrip</title>
+    <link rel="stylesheet" href="exercicio-4-pratica.css">
+</head>
+
+<body>
+    <header>
+        <h1>Trybe Trip</h1>
+    </header>
+    <form action="" method="get">
+        <fieldset id="formulario">
+            <div class="conteudo">
+                <label for="name"><span>*</span>Nome: </label>
+                <input type="text" name="name" id="name" class="input-box" minlength="10" maxlength="40" required autocomplete="off">
+            </div>
+            <div class="conteudo">
+                <label for="email"><span>*</span>Email: </label>
+                <input type="email" name="email" id="email" class="input-box" minlength="10" maxlength="50" required autocomplete="off" >
+            </div>
+            <div class="conteudo">
+                <input type="radio" name="trip-destination" id="cidade" value="cidade">
+                <label for="cidade" class="destination">Cidade</label>
+                <input type="radio" name="trip-destination" id="campo" value="campo">
+                <label for="campo" class="destination">Campo</label>
+                <input type="radio" name="trip-destination" id="praia" value="praia">
+                <label for="praia" class="destination">Praia</label>
+                <input type="radio" name="trip-destination" id="montanhas" value="montanhas">
+                <label for="montanhas" class="destination">Montanhas</label>
+            </div>
+            <div class="conteudo">
+                <label for="resposta"><span>*</span>Espaço para digitar a resposta:</label><br>
+                <textarea name="resposta" id="resposta"
+                    placeholder="Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip? Min: 10 Máx: 500 caracteres"
+                    minlength="10" maxlength="500" required></textarea>
+            </div>
+            <div class="conteudo">
+                <label for="data">Melhor data para a viagem: </label>
+                <input type="date" name="data" id="data" value="2023-07-01" min="2023-04-01" max="2023-12-31">
+            </div>
+            <div class="conteudo">
+                <input type="checkbox" name="agree-term" id="agree-term-1">
+                <label for="agree-term-1" class="agrre-term">Gostaria de receber outras incríveis oportunidades
+                    oferecidas pela Trybe?</label>
+                <br>
+                <input type="checkbox" name="agree-term" id="agree-term-2">
+                <label for="agree-term-2" class="agrre-term"><span>*</span>Concordo que imagens das minhas férias
+                    poderão ser usadas na divulgação de concursos futuros</label>
+            </div>
+            <div>
+                (<span>*</span>) Preenchimentos obrigatórios.
+            </div>
+        </fieldset>
+        <div class="btn-submit-reset">
+            <button type="submit" class="btn" id="btn-submit">Enviar</button>
+            <button type="reset" class="btn">Apagar</button>
+        </div>
+    </form>
+    <script src="exercicio-4-pratica.js"></script>
+</body>
+
+</html>
