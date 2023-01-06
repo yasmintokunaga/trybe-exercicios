@@ -19,7 +19,7 @@
         <div class="rotulo">
             <div class="conteudo">
                 <label for="full-name">Nome Completo</label>
-                <input type="text" name="full-name" id="full-name">
+                <input type="text" name="full-name" id="full-name" required>
             </div>
         </div>
         <!-- Campo tipo de evento -->
@@ -42,7 +42,24 @@
                 <option value="l">G</option>
             </select>
         </div>
+        <!-- Campo resumo -->
+        <div class="conteudo">
+            <label for="resumo">Resumo</label><br>
+            <textarea name="resumo" id="resumo" placeholder="Descreva a sua palestra em 500 palavras ou menos"></textarea>
+        </div>
+        <!-- Campo disponibilidade -->
+        <div class="conteudo">
+            <label for="available">
+                <input type="checkbox" name="available" id="available" value="is-available">
+                <span>Estou disponível para a data do evento</span>
+            </label>
+        </div>
+        <!-- Campo Botão Enviar -->
+        <div class="conteudo">
+            <button type="submit" id="btn-Submit">Enviar</button>
+        </div>
     </form>
+    <script src="exercicio-3-aula.js"></script>
 </body>
 
 </html>
