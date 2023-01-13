@@ -1,0 +1,121 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid gray;
+}
+
+header p {
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Pacifico', cursive;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 5px 0;
+}
+
+main h1 {
+  font-size: 24px;
+}
+
+main h2 {
+  font-size: 23px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+footer h3 {
+  font-size: 22px;
+}
+
+footer {
+  padding: 12px;
+  border-top: 1px solid gray;
+}
+
+@media screen and (min-width: 767px) {
+  #asides {
+    display: flex;
+    font-size: 18px;
+  }
+
+  #asides .aside-one {
+    /* flex-basis: 55%; */
+    border-right: 1px solid gray;
+    padding-right: 12px;
+    margin-right: 12px;
+    margin-bottom: 15px;
+  }
+
+  .main-content {
+    margin: 0 15px;
+  }
+
+  header p {
+    font-size: 30px;
+  }
+
+  footer {
+    margin: 0 15px;
+  }
+}
+
+@media screen and (min-width: 1279px) {
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+  }
+
+  header p {
+    font-size: 35px;
+  }
+  nav ul {
+    width: 600px;
+  }
+
+  main {
+    flex-direction: row;
+  }
+  main article {
+    max-width: 50%;
+    padding-left: 80px;
+    padding-right: 20px;
+    border-right: 1px solid gray;
+  }
+
+  #asides {
+    flex-direction: column;
+    margin: 0 40px;
+    position: fixed;
+    left: 700px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  #asides .aside-one {
+    border: none;
+  }
+}
