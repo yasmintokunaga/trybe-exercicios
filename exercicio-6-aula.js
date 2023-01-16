@@ -21,12 +21,20 @@ const student2 = {
 //   }
 // };
 
-const listarHabilidades = (objeto) => {
-  const arrayKeys = Object.keys(objeto);
-  const arrayValues = Object.values(objeto);
+// const listarHabilidades = (objeto) => {
+//   const arrayKeys = Object.keys(objeto);
+//   const arrayValues = Object.values(objeto);
 
-  for (let index = 0; index < arrayKeys.length; index += 1) {
-    console.log(`${arrayKeys[index]}, Nível: ${arrayValues[index]}`);
+//   for (let index = 0; index < arrayKeys.length; index += 1) {
+//     console.log(`${arrayKeys[index]}, Nível: ${arrayValues[index]}`);
+//   }
+// }
+
+const listarHabilidades = (objeto) => {
+  const arrayObject = Object.entries(objeto);
+
+  for (let index = 0; index < arrayObject.length; index += 1) {
+    console.log(`${arrayObject[index][0]}, Nível: ${arrayObject[index][1]}`)
   }
 }
 
