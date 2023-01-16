@@ -41,7 +41,6 @@ const customerInfo = (order) => {
   const phone = order['phoneNumber'];
   const adress = Object.entries(order['address']).join(', ');
   console.log(`Olá ${delivery}, entrega para: ${name}, Telefone: ${phone}, ${adress}`);
-
 };
 
 customerInfo(order);
