@@ -57,7 +57,7 @@ const listarValoresObjeto = (objeto) => {
 
 // Crie um objeto de nome allLessons, que deve agrupar todas as aulas através do Object.assign. Cada chave desse novo objeto será uma aula, sendo essas chaves lesson1, lesson2 e lesson3. 
 
-const allLessons = Object.assign({}, {lesson1, lesson2, lesson3});
+const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 });
 
 // console.log(allLessons);
 
@@ -68,7 +68,7 @@ const numeroEstudantes = (objeto) => {
   let numEstudante = 0;
   // console.log(chaves);
   for (let index = 0; index < chaves.length; index += 1) {
-    numEstudante += objeto[chaves[index]]['numeroEstudantes'];    
+    numEstudante += objeto[chaves[index]]['numeroEstudantes'];
   }
 
   return numEstudante;
@@ -87,8 +87,46 @@ const getValueByNumber = (objeto, posicao) => {
 // Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles o objeto, o nome da chave e o valor da chave.
 
 const verifyPair = (objeto, chave, valor) => {
-  return objeto[chave] === valor; 
+  return objeto[chave] === valor;
 };
 
-console.log(verifyPair(lesson3, 'turno', 'noite'));
-console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+// console.log(verifyPair(lesson3, 'turno', 'noite'));
+// console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+
+// Utilizando o objeto (allLesson), crie uma função para contar quantos estudantes assistiram às aulas de Matemática;
+const numEstudanteMateria = (objeto, materia) => {
+  const chaves = listarChaves(objeto);
+  let numEstudante = 0;
+
+  for (let index = 0; index < chaves.length; index += 1) {
+    if (objeto[chaves[index]]['materia'] === materia) {
+      numEstudante += objeto[chaves[index]]['numeroEstudantes'];
+    }
+  }
+
+  return numEstudante;
+}
+
+// console.log(numEstudanteMateria(allLessons, 'Matemática'));
+
+// Utilizando o objeto (allLesson), crie uma função que deva retornar um objeto que represente o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes.
+
+const createReport = (objeto, professor) => {
+  const chaves = listarChaves(objeto);
+  const objProf = {
+    'professor': professor,
+    aulas: [],
+    estudantes: 0,
+  }
+
+  for (let index = 0; index < chaves.length; index += 1) {
+    if (objeto[chaves[index]]['professor'] === professor) {
+      objProf['aulas'].push(objeto[chaves[index]]['materia']);
+      objProf['estudantes'] += objeto[chaves[index]]['numeroEstudantes'];
+    }
+  }
+
+  return objProf;
+};
+
+console.log(createReport(allLessons, 'Maria Clara'));
