@@ -1,0 +1,28 @@
+// const valorItens = [1, 32, 44, 2, 3];
+
+// valorItens.reduce((acc, curr) => {
+//   console.log(`acumulador - acc:`, acc);
+//   console.log(`valorAtual - curr:`, curr);
+//   return acc + curr;
+// }, 0);
+
+// Tente criar a função que busca o maior valor do array numbers utilizando apenas o reduce.
+
+// const numbers = [50, 85, -30, 3, 15];
+
+// const maiorNum = numbers.reduce((acc, curr) => curr > acc ? curr : acc);
+
+// console.log(maiorNum);
+
+// faça uma função que some todos os números pares do array numbers:
+
+const numbers = [18, 19, 23, 53, 4, 5, 76, 23, 54];
+
+// const soma = numbers.reduce((sum, number) => number % 2 === 0 ? sum + number : sum);
+
+const isEven = (number) => number % 2 === 0;
+const sum = (accumulator, number) => accumulator + number;
+
+const soma = (array) => array.filter(isEven).reduce(sum);
+
+console.log(soma(numbers));
