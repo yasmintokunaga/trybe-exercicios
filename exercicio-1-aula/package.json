@@ -1,0 +1,23 @@
+{
+  "name": "gerador-de-senhas",
+  "version": "1.0.0",
+  "description": "melhorgerador de senhas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasmintokunaga/trybe-exercicios.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasmintokunaga/trybe-exercicios/issues"
+  },
+  "homepage": "https://github.com/yasmintokunaga/trybe-exercicios#readme",
+  "dependencies": {
+    "nanoid": "^4.0.0"
+  },
+  "type": "module"
+}
