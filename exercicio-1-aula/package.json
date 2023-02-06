@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/yasmintokunaga/trybe-exercicios#readme",
   "dependencies": {
+    "clipboard-copy": "^4.0.1",
     "eslint-config-trybe-frontend": "^1.7.0",
     "nanoid": "^4.0.0"
   },
