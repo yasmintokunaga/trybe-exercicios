@@ -1,6 +1,7 @@
 // console.log('Hello Wolrd');
 
-import{ nanoid } from "nanoid";
+import { nanoid } from 'nanoid';
+import './style.css'
 
 // console.log(nanoid());
 
