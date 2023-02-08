@@ -1,6 +1,7 @@
-import { validator } from 'validator';
-import isEmail from 'validator/lib/isEmail';
-import isTaxID from 'validator/lib/isEmail';
+// import validator from 'validator';
+import { isEmail, isTaxID } from 'validator';
+// import isEmail from 'validator/lib/isEmail';
+// import isTaxID from 'validator/lib/isTaxID';
 
 import "./style.css";
 
