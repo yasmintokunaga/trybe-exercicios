@@ -1,0 +1,21 @@
+{
+  "name": "frontend-1.4-exercicio-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "vite --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sweetalert2": "^11.7.1",
+    "vite": "^4.1.1"
+  },
+  "devDependencies": {
+    "jest": "^29.4.2"
+  },
+  "type": "module"
+}
