@@ -4,42 +4,24 @@ class Form extends React.Component {
   constructor() {
     super();
 
-    this.handleTextArea = this.handleTextArea.bind(this);
-    this.handleInputName = this.handleInputName.bind(this);
-    this.handleInputEmail = this.handleInputEmail.bind(this);
-    this.handleSelectOption = this.handleSelectOption.bind(this);
+    this.handler = this.handler.bind(this);
 
     this.state = {
       comidaFavorita: '',
-      name: '',
+      nome: '',
       email: '',
       estado: 'sp',
     };
   }
 
-  handleTextArea(event) {
+  handler({ target }) {
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value; 
+
     this.setState({
-      comidaFavorita: event.target.value,
+      [name]: value,
     })
   };
-
-  handleInputName(event) {
-    this.setState({
-      name: event.target.value,
-    })
-  }
-
-  handleInputEmail(event) {
-    this.setState({
-      email: event.target.value,
-    })
-  }
-
-  handleSelectOption(event) {
-    this.setState({
-      estado: event.target.value,
-    })
-  }
 
   render() {
     return (
@@ -49,7 +31,7 @@ class Form extends React.Component {
 
           <label for="dropdown-estado">
           Estado
-          <select name="estado" id="dropdown-estado" onChange={this.handleSelectOption}>
+          <select name="estado" id="dropdown-estado" onChange={this.handler} value={this.state.estado}>
             <option value="sp">SP</option>
             <option value="rj">RJ</option>
           </select>
@@ -61,7 +43,9 @@ class Form extends React.Component {
               type="text"
               placeholder='Digite o seu nome'
               id="nome"
-              onChange={this.handleInputName}
+              name="nome"
+              onChange={this.handler}
+              value={this.state.nome}
             />
           </label>
 
@@ -71,7 +55,9 @@ class Form extends React.Component {
               type="email"
               placeholder='Digite o seu email'
               id="email"
-              onChange={this.handleInputEmail}
+              name="email"
+              onChange={this.handler}
+              value={this.state.email}
             />
           </label>
 
@@ -82,7 +68,7 @@ class Form extends React.Component {
               name='comidaFavorita'
               placeholder='Liste as suas comidas favoritas'
               value={this.state.comidaFavorita}
-              onChange={this.handleTextArea}
+              onChange={this.handler}
             />
           </label>
         </form>
