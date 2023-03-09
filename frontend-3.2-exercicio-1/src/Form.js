@@ -1,4 +1,8 @@
 import React from 'react';
+import ComidaFavorita from './ComidaFavorita.js';
+import Email from './Email.js';
+import Estado from './Estado.js';
+import Nome from './Nome.js';
 
 class Form extends React.Component {
   constructor() {
@@ -16,7 +20,7 @@ class Form extends React.Component {
 
   handler({ target }) {
     const { name } = target;
-    const value = target.type === 'checkbox' ? target.checked : target.value; 
+    const value = target.type === 'checkbox' ? target.checked : target.value;
 
     this.setState({
       [name]: value,
@@ -29,48 +33,11 @@ class Form extends React.Component {
         <h1>Fourmulário</h1>
         <form>
 
-          <label for="dropdown-estado">
-          Estado
-          <select name="estado" id="dropdown-estado" onChange={this.handler} value={this.state.estado}>
-            <option value="sp">SP</option>
-            <option value="rj">RJ</option>
-          </select>
-          </label>
+          <Nome handler={this.handler} value={this.state.nome} />
+          <Estado handler={this.handler} value={this.state.estado} />
+          <Email handler={this.handler} value={this.state.email} />
+          <ComidaFavorita handler={this.handler} value={this.state.comidaFavorita} />
 
-          <label for="nome">
-            Nome
-            <input 
-              type="text"
-              placeholder='Digite o seu nome'
-              id="nome"
-              name="nome"
-              onChange={this.handler}
-              value={this.state.nome}
-            />
-          </label>
-
-          <label for="email">
-            Email
-            <input 
-              type="email"
-              placeholder='Digite o seu email'
-              id="email"
-              name="email"
-              onChange={this.handler}
-              value={this.state.email}
-            />
-          </label>
-
-          <label for="comida-favorita">
-            Comida Favorita
-            <textarea 
-              id="comida-favorita"
-              name='comidaFavorita'
-              placeholder='Liste as suas comidas favoritas'
-              value={this.state.comidaFavorita}
-              onChange={this.handler}
-            />
-          </label>
         </form>
       </main>
     )
