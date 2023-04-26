@@ -21,7 +21,10 @@ export function requestFailed(error) {
 }
 
 export function fetchDogImage() {
-  return () => {
-    
+  return (dispatch) => {
+    dispatch(requestStarted());
+    fetch('https://dog.ceo/api/breeds/image/random')
+    .then(response => response.json())
+    .then(data => dispatch(requestedSuccessful(data.message)))
   }
 }
